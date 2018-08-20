@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='ttbp',
@@ -15,7 +15,7 @@ setup(
         'License :: OSI Approved :: MIT License',
     ],
     keywords='blog',
-    packages=['ttbp'],
+    packages=find_packages(),
     install_requires = [
         'inflect==0.2.5',
         'mistune==0.8.1',
