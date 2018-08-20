@@ -1,1 +1,5 @@
-recursive-include *.txt *.css
+include ttbp/config/defaults/style.css
+include ttbp/config/defaults/header.txt
+include ttbp/config/defaults/footer.txt
+include ttbp/config/banner-beta.txt
+
