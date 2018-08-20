@@ -2,11 +2,15 @@
 <html>
   <head>
     <title>$USER on TTBP</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://tilde.team/css/hacker.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="meta">
-      <h1><a href="#">~$USER</a>@<a href="/~endorphant/ttbp">TTBP</a></h1>
+      <h1><a href="#">~$USER</a>@<a href="https://tilde.town/~endorphant/ttbp">TTBP</a></h1>
     </div>
 
     <div id="tlogs">
