@@ -610,6 +610,7 @@ def main_menu():
         "manage your feels",
         "check out your neighbors",
         "browse global feels",
+        "manage your subscriptions",
         "scribble some graffiti",
         "change your settings",
         "send some feedback",
@@ -660,7 +661,7 @@ def main_menu():
         )
         core.load(setup())  # reload settings to core
     elif choice == "7":
-        redraw("you're about to send mail to ~endorphant about ttbp")
+        redraw("you're about to send mail to sudoers@envs.net about ttbp")
         feedback_menu()
     elif choice == "8":
         redraw()
