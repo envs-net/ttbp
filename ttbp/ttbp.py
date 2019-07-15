@@ -359,13 +359,11 @@ def gen_header():
     <body id=\"body\">
 
         <div class=\"container\">
-            <div>
-                <pre><blockquote>
-                  <h1><a href=\"index.html#\">~"""
-        + config.USER
-        + """</a>@<a href=\"https://tilde.town/~endorphant/ttbp\">TTBP</a></h1>
-
-                </blockquote></pre>
+            <div id=\"meta\">
+                <pre><blockquote><h1><a href=\"index.html#\">~"""
++ config.USER
++ """</a>@<a href=\"https://tilde.town/~endorphant/ttbp\">TTBP</a></h1>
+</blockquote></pre>
             </div>
 
             <!---put your custom html here-->
