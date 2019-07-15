@@ -9,14 +9,14 @@ from .. import util
 
 # We refer to some package files (ie .css stuff), so we save a reference to the
 # path.
-INSTALL_PATH = os.path.dirname(sys.modules['ttbp'].__file__)
+INSTALL_PATH = os.path.dirname(sys.modules["ttbp"].__file__)
 
 # We use this to store any persisted, global state.
-VAR = '/var/global/ttbp'
-VAR_WWW = os.path.join(VAR, 'www')
+VAR = "/var/global/ttbp"
+VAR_WWW = os.path.join(VAR, "www")
 
-if not os.path.isdir('/var/global'):
-    raise Exception('bad system state: /var/global does not exist.')
+if not os.path.isdir("/var/global"):
+    raise Exception("bad system state: /var/global does not exist.")
 
 if not os.path.isdir(VAR):
     os.mkdir(VAR)
@@ -24,7 +24,7 @@ if not os.path.isdir(VAR):
 if not os.path.isdir(VAR_WWW):
     os.mkdir(VAR_WWW)
 
-LIVE = 'https://envs.net/~'
+LIVE = "https://envs.net/~"
 FEEDBOX = "sudoers@envs.net"
 USERFILE = os.path.join(VAR, "users.txt")
 GRAFF_DIR = os.path.join(VAR, "graffiti")
@@ -36,7 +36,7 @@ if not os.path.isdir(GRAFF_DIR):
 
 ## Defaults
 
-DEFAULT_HEADER = '''
+DEFAULT_HEADER = """
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html>
   <head>
@@ -44,7 +44,7 @@ DEFAULT_HEADER = '''
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://tilde.team/css/hacker.css" />
+    <link rel="stylesheet" href="https://envs.net/css/css_style.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -53,48 +53,49 @@ DEFAULT_HEADER = '''
     </div>
 
     <div id="tlogs">
-'''.lstrip()
+""".lstrip()
 
-DEFAULT_FOOTER = '''
+DEFAULT_FOOTER = """
     </div>
   </body>
 </html>
-'''.lstrip()
+""".lstrip()
 
-with open(os.path.join(INSTALL_PATH, 'config', 'defaults', 'style.css')) as f:
+with open(os.path.join(INSTALL_PATH, "config", "defaults", "style.css")) as f:
     DEFAULT_STYLE = f.read()
 
 
 ## User config
 
-USER = os.path.basename(os.path.expanduser('~'))
-USER_HOME = os.path.expanduser('~')
-PATH = os.path.join(USER_HOME, '.ttbp')
-PUBLIC = os.path.join(USER_HOME, 'public_html')
-WWW = os.path.join(PATH, 'www')
-GOPHER_ENTRIES = os.path.join(PATH, 'gopher')
-GOPHER_PATH = os.path.join(USER_HOME, 'public_gopher', 'feels')
-USER_CONFIG = os.path.join(PATH, 'config')
-TTBPRC = os.path.join(USER_CONFIG, 'ttbprc')
-MAIN_FEELS = os.path.join(PATH, 'entries')
-BURIED_FEELS = os.path.join(PATH, 'buried')
-NOPUB = os.path.join(USER_CONFIG, 'nopub')
-BACKUPS = os.path.join(PATH, 'backups')
+USER = os.path.basename(os.path.expanduser("~"))
+USER_HOME = os.path.expanduser("~")
+PATH = os.path.join(USER_HOME, ".ttbp")
+PUBLIC = os.path.join(USER_HOME, "public_html")
+WWW = os.path.join(PATH, "www")
+GOPHER_ENTRIES = os.path.join(PATH, "gopher")
+GOPHER_PATH = os.path.join(USER_HOME, "public_gopher", "feels")
+USER_CONFIG = os.path.join(PATH, "config")
+TTBPRC = os.path.join(USER_CONFIG, "ttbprc")
+MAIN_FEELS = os.path.join(PATH, "entries")
+BURIED_FEELS = os.path.join(PATH, "buried")
+NOPUB = os.path.join(USER_CONFIG, "nopub")
+BACKUPS = os.path.join(PATH, "backups")
+SUBS = os.path.join(USER_CONFIG, "subs")
 
 ## UI
 
-BANNER = '''
+BANNER = """
 ___________________________________________________________
 |                                                          |
 |  ____ ____ ____ _    ____    ____ _  _ ____ _ _  _ ____  |
 |  |___ |___ |___ |    [__     |___ |\ | | __ | |\ | |___  |
 |  |    |___ |___ |___ ___]    |___ | \| |__] | | \| |___  |
-|                            <gan jue; to feel> ver 0.12.0 |
+|                            <gan jue; to feel> ver 0.12.2 |
+|       envs.net edition                                   |
 |__________________________________________________________|
-envs.net edition
-'''.lstrip()
+""".lstrip()
 #  ~ u n s t a b l e  e x p e r i m e n t a l  b r a n c h ~
-#'''.lstrip()
+# '''.lstrip()
 
 ## page texts
 
@@ -123,7 +124,7 @@ other contributors:
     ~sinacutie, for css updates
 
 if you have ideas for ttbp, you are welcome to contact me to discuss them;
-please send me tildemail or open a github issue. i am not a very experienced
+please send me tildemail or open an issue. i am not a very experienced
 developer, and ttbp is one of my first public-facing projects, so i appreciate
 your patience while i learn how to be a better developer!
 
@@ -143,7 +144,9 @@ these.
 press <enter> to begin recording your feels in your chosen text
 editor.
 
-""".format(today=time.strftime("%d %B %Y"))
+""".format(
+    today=time.strftime("%d %B %Y")
+)
 
 bury_feels_prompt = """\
 burying a feel removes it from view, including your own. buried feels are
@@ -159,7 +162,9 @@ command line to view your buried feels)
 
 which day's feels do you want to bury?
 
-YYYYMMDD (or 'q' to cancel)> """.format(buried_dir=BURIED_FEELS)
+YYYYMMDD (or 'q' to cancel)> """.format(
+    buried_dir=BURIED_FEELS
+)
 
 account_wipe_prompt = """\
 warning! ! ! this action is irreversible!!!
@@ -186,33 +191,33 @@ just in case a future version of you still wants to look them over.
 
 mystery_error = """\
 sorry, something went wrong! please try to address the error and try again.
-if you need help, ask in IRC or send mail to ~endorphant and we'll try to
+if you need help, ask in IRC or send mail to sudoers@envs.net and we'll try to
 figure it out!
 """.lstrip()
 
 ## update announcements
 
 UPDATES = {
-        "0.9.0": """
+    "0.9.0": """
 ver. 0.9.0 features:
     * browsing other people's feels from neighbor view
     * documentation browser""",
-        "0.9.1": """
+    "0.9.1": """
 ver 0.9.1 features:
     * graffiti wall """,
-        "0.9.2": """
+    "0.9.2": """
 ver 0.9.2 features:
     * paginated entry view
     * improved entry listing performance so it should
       be less sluggish (for now)
     * expanded menu for viewing your own feels (further features to be implemented) """,
-        "0.9.3": """
+    "0.9.3": """
 version 0.9.3 features:
         * ttbp is now packaged, making it easier to contribute to.
         * things should otherwise be the same!
         * check out https://github.com/modgethanc/ttbp if you'd like to contribute.
         * takes advantage of new /var/global """,
-        "0.10.1": """
+    "0.10.1": """
 ~[version 0.10.1 features]~
         * thanks to help from ~vilmibm, ttbp now supports publishing to gopher!
         * if you enable gopher publishing, feels will automatically publish to
@@ -220,7 +225,7 @@ version 0.9.3 features:
         * if you don't know what gopher is, it's fine to opt-out; ask around on
             irc if you'd like to learn more!
         * the settings menu has been reworked to be less clunky""",
-        "0.11.0": """
+    "0.11.0": """
 ~[version 0.11.0 update]~
 
     * rainbow menus are now an option! please message ~endorphant (with
@@ -243,14 +248,14 @@ version 0.9.3 features:
         * ~login created centralfeels, which is an opt-in collection of
             html-published feels; create a blank file called '.centralfeels' in
             your home directory if you'd like to be included!""",
-        "0.11.1": """
+    "0.11.1": """
 ~[version 0.11.1 update]~
 
     * a quick patch to correct a directory listing error, nothing too
       exciting
     * general PSA: feel free to use the github repo for bugs/feature requests:
             https://github.com/modgethanc/ttbp/issues""",
-        "0.11.2": """
+    "0.11.2": """
 ~[version 0.11.2 update]~
 
     * added a new option to allow setting entries to default to either public or
@@ -258,7 +263,7 @@ version 0.9.3 features:
       already publishing to html/gopher, but is available either way!
 
       you can find this option under 'settings' as 'post as nopub'.""",
-        "0.11.3": """
+    "0.11.3": """
 ~[version 0.11.3 update]~
 
     * thanks to ~sinacutie, you can now set custom css for the permalink text
@@ -266,7 +271,7 @@ version 0.9.3 features:
       your current css file, and shouldn't change the appearance of your page.
 
       if you're not using custom css, don't worry about this!""",
-        "0.12.0": """
+    "0.12.0": """
 ~[version 0.12.0 update]~
 
     a lot of new stuff this time! from the main menu, option (1) is now called
@@ -298,5 +303,36 @@ version 0.9.3 features:
     i'm just making this option available for anyone whose financially stable
     and wants to kick some spare change my way; this is a labor of love, and i'm
     happy to work on it regardless :)
-"""
+""",
+    "0.12.1": """
+~[version 0.12.1 update]~
+
+    new feature: "visit your subscriptions"
+        * view recent entries from a list of townies you've subscribed to
+        * subscription list is private; no one else can see who you're following
+        * add/remove users from the subscription menu
+
+    minor changes:
+        * global feed now shows 50 most recent entries, which you can scroll through
+        * documentation page updated to reflect new feature
+        * graffiti wall lock releases after 3 days
+
+    thanks for those of your who've written me with feedback!
+
+    keep feelin' together <3
+""",
+    "0.12.2": """
+~[version 0.12.2 update]~
+
+    bug fix: ~epicmorphism helped out with fixing the pagination bug! now, when
+    you scroll through a list of entries, it'll correctly return you to the
+    page you were on if you open and close an item. thanks so much, friend <3
+
+    thanks to everyone writing me with feedback; i've been real busy lately,
+    and i might not get to making improvements or responding to mail for a
+    while :(
+
+    feel on!
+    ~endo
+""",
 }
