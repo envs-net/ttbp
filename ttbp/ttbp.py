@@ -1230,7 +1230,7 @@ def send_feedback(entered, subject="none"):
         id = "#"+util.genID(3)
         mail = MIMEText(message)
         mail['To'] = config.FEEDBOX
-        mail['From'] = config.USER+"@tilde.team"
+        mail['From'] = config.USER+"@envs.net"
         mail['Subject'] = " ".join(["[ttbp]", subject, id])
         m = os.popen("/usr/sbin/sendmail -t -oi", 'w')
         m.write(mail.as_string())
@@ -1484,7 +1484,7 @@ if yes, your feels will be published to a directory of your choice in
 your public_html. i'll confirm the location of that directory in a
 moment.
 
-if not, your feels will only be readable from within the tilde.team
+if not, your feels will only be readable from within the envs.net
 network. if you already have a publishing directory, i'll remove it for
 you (don't worry, your written entries will still be saved!)
 
@@ -1667,7 +1667,7 @@ def update_user_version():
             print("""
     * thanks to help from ~vilmibm, ttbp now supports publishing to gopher!
     * if you enable gopher publishing, feels will automatically publish to
-        gopher://tilde.team/1/~"""+config.USER+"""/feels
+        gopher://envs.net/1/~"""+config.USER+"""/feels
 
             """)
             SETTINGS.update({'gopher': gopher.select_gopher()})

@@ -24,8 +24,8 @@ if not os.path.isdir(VAR):
 if not os.path.isdir(VAR_WWW):
     os.mkdir(VAR_WWW)
 
-LIVE = 'https://tilde.team/~'
-FEEDBOX = "sudoers@tilde.team"
+LIVE = 'https://envs.net/~'
+FEEDBOX = "sudoers@envs.net"
 USERFILE = os.path.join(VAR, "users.txt")
 GRAFF_DIR = os.path.join(VAR, "graffiti")
 WALL = os.path.join(GRAFF_DIR, "wall.txt")
@@ -91,7 +91,7 @@ ___________________________________________________________
 |  |    |___ |___ |___ ___]    |___ | \| |__] | | \| |___  |
 |                            <gan jue; to feel> ver 0.12.0 |
 |__________________________________________________________|
-team edition
+envs.net edition
 '''.lstrip()
 #  ~ u n s t a b l e  e x p e r i m e n t a l  b r a n c h ~
 #'''.lstrip()
@@ -101,9 +101,9 @@ team edition
 intro_prompt = """
 i don't recognize you, stranger. let's make friends.
 
-the feels engine is an internal blogging platform on tilde.team. it assists you
+the feels engine is an internal blogging platform on envs.net. it assists you
 in recording your feels, giving you the option to publish to html or gopher, and
-read the feels of other users on tilde.team.
+read the feels of other users on envs.net.
 
 press <enter> to set up an account, or <ctrl-c> to quit.
 """.lstrip()
@@ -112,8 +112,8 @@ credits = """
 ttbp was written for tilde.town by ~endorphant in python. the codebase is
 publicly available on github at https://github.com/modgethanc/ttbp
 
-this version was forked for tilde.team with the source here:
-https://git.tildeverse.org/team/ttbp
+this version was forked for envs.net with the source here:
+https://github.com/envs-net/ttbp
 
 tips for development are accepted at https://liberapay.com/modgethanc/
 
