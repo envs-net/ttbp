@@ -294,7 +294,7 @@ def write_global_feed(blogList):
             <link rel="stylesheet" href="style.css" />
         </head>
         <body>
-            <div class="meta">
+            <div>
             <h1>envs.net feels engine</h1>
 
             <h2><a href="https://github.com/modgethanc/ttbp">github

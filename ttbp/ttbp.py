@@ -354,13 +354,18 @@ def gen_header():
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
         <link rel=\"stylesheet\" href=\"https://envs.net/css/css_style.css\" />
         <link rel=\"stylesheet\" href=\"style.css\" />
+        <script src=\"https://envs.net/js/darklight.js\"></script>
     </head>
-    <body>
+    <body id=\"body\">
+
         <div class=\"container\">
-            <div id=\"meta\">
-                <h1><a href=\"index.html#\">~"""
+            <div>
+                <pre><blockquote>
+                  <h1><a href=\"index.html#\">~"""
         + config.USER
         + """</a>@<a href=\"https://tilde.town/~endorphant/ttbp\">TTBP</a></h1>
+
+                </blockquote></pre>
             </div>
 
             <!---put your custom html here-->

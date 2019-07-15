@@ -8,12 +8,13 @@
 }
 
 #tlogs {
-  margin-top: 5em;
+/*  margin-top: 5em; */
+  margin: 1em 0 2em 4em;
   width: 80%;
 }
 
 .entry {
-  border: 1px dotted white;
+/*  border: 1px dotted white; */
   padding: .4em;
   margin-bottom:-4em;
 }
@@ -23,7 +24,7 @@
 }
 
 .entry p.permalink {
-  font-size: .6em;
+  font-size: .7em;
   font-color: #808080;
   text-align: right;
 }

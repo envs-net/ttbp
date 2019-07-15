@@ -46,10 +46,15 @@ DEFAULT_HEADER = """
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://envs.net/css/css_style.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://envs.net/js/darklight.js"></script>
   </head>
-  <body>
-    <div id="meta">
-      <h1><a href="#">~$USER</a>@<a href="https://tilde.town/~endorphant/ttbp">TTBP</a></h1>
+  <body id="body">
+
+    <div>
+      <pre><blockquote>
+        <h1><a href="#">~$USER</a>@<a href="https://tilde.town/~endorphant/ttbp">TTBP</a></h1>
+
+      </blockquote></pre>
     </div>
 
     <div id="tlogs">
@@ -57,6 +62,17 @@ DEFAULT_HEADER = """
 
 DEFAULT_FOOTER = """
     </div>
+<!-- Button DarkLight-->
+      <div class="button_darklight">
+        <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
+      </div>
+
+<script>
+(function() {
+  setThemeFromCookie()
+})();
+</script>
+
   </body>
 </html>
 """.lstrip()

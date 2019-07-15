@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://envs.net/css/css_style.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="meta">
+  <body id="body">
+    <div>
       <h1><a href="#">~$USER</a>@<a href="https://tilde.town/~endorphant/ttbp">TTBP</a></h1>
     </div>
 
