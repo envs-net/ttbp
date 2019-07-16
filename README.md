@@ -1,33 +1,32 @@
-*a command-line based blogging platform running on tilde.team*
+*a command-line based blogging platform running on envs.net*
 
 `ttbp` stands for "tilde.town blogging platform", the original working name for
 this project.
 
-![ttbp main menu screenshot](https://tilde.town/~endorphant/ttbp/screenshots/ttbp-main.png)
+![ttbp main menu screenshot](https://envs.net/ttbp/screenshots/ttbp-main.png)
 
-![ttbp entries view screenshot](https://tilde.town/~endorphant/ttbp/screenshots/ttbp-entries.png)
+![ttbp entries view screenshot](https://envs.net/ttbp/screenshots/ttbp-entries.png)
 
-![ttbp compose view screenshot](https://tilde.town/~endorphant/ttbp/screenshots/ttbp-compose.png)
+![ttbp compose view screenshot](https://envs.net/ttbp/screenshots/ttbp-compose.png)
 
 `ttbp` runs from the command line, providing a hub for writing personal blog
-posts and reading posts written by other users of tilde.team. it's a little bit
+posts and reading posts written by other users of envs.net. it's a little bit
 like livejournal or dreamwidth or tumblr. you can opt to publish your posts to a
-public html file hosted on your tilde page, to tilde.team's gopher server, or
-keep all your entries private to the tilde.team server.
+public html file hosted on your tilde page, to envs.net's gopher server, or
+keep all your entries private to the envs.net server.
 
-to use, run `feels` while logged in to tilde.team
+to use, run `feels` while logged in to envs.net
 
-this is a project that runs on tilde.team, so all users of this program are
-expected to operate under the tilde.team [code of
-conduct](http://tilde.team/wiki/?page=code-of-conduct). content/personal issues should be
-worked out according to the CoC, with support from the [administrative
-team](http://tilde.team/wiki/?page=administration) if needed.
+this is a project that runs on envs.net, so all users of this program are
+expected to operate under the envs.net [code of
+conduct](http://envs.net/code-of-conduct). content/personal issues should be
+worked out according to the CoC, with support from the sudoers@envs.net Team if needed.
 
 
 ### QUICK START
 
 no coding or html experience is necessary to get started. just log in to your
-tilde.team account and enter:
+envs.net account and enter:
 
 `feels`
 
@@ -39,11 +38,11 @@ that's it!
 ### support
 
 if you're having trouble getting started, or run into program errors or strange
-behavior, please send internal tilde.team mail to sudoers@tilde.team and i'll try to
+behavior, please send internal envs.net mail to sudoers@envs.net and i'll try to
 sort things out!
 
 there's also a function from the main menu that lets you send feedback/inquiries
-to me directly; this uses internal tilde.team mail, which is what i'll respond
+to me directly; this uses internal envs.net mail, which is what i'll respond
 to.
 
 ### writing entries
@@ -51,7 +50,7 @@ to.
 entries are recorded as plaintext files in your `~/.ttbp/entries` directory.
 `ttbp` will use your selected editor to open and write files; each day is its
 own entry, like a diary page. at midnight for whatever timezone you've set for
-your user account on tilde.team, you'll get a fresh entry. if you don't write
+your user account on envs.net, you'll get a fresh entry. if you don't write
 any feels on a particular day, no entries will show up there.
 
 when you save and quit the text editor, your entry will automatically propagate
@@ -79,7 +78,7 @@ by creating files with any date you want.)*
 ### reading other feels
 
 the `browse global feels` feature shows the ten most recent entries that anyone
-has written on ttbp. this list is only accessible from within tilde.team,
+has written on ttbp. this list is only accessible from within envs.net,
 although individual entries may be posted to html or gopher.
 
 you can also pull up a list of a single user's feels through `check out your
@@ -91,7 +90,7 @@ opted to publish their posts.
 private information, even if a particular user is publishing entries in a
 world-viewable way! please be respectful about having access to other people's
 feels, and do not copy/repeat any information without getting their explicit
-permission. tilde.team operates on a high level of mutual trust, and `ttbp` is
+permission. envs.net operates on a high level of mutual trust, and `ttbp` is
 designed to give individuals control over their content.
 
 ### privacy
@@ -100,7 +99,7 @@ when you start your ttbp, you have the option of publishing or not publishing
 your blog.
 
 if you opt to not publish, your entires will never be accessible from outside of
-the tilde.team network; other tilde.team users will still be able to read your
+the envs.net network; other envs.net users will still be able to read your
 entries through the ttbp interface, or by directly accessing your
 `~/.ttbp/entries` directory.
 
@@ -110,7 +109,7 @@ directory.
 if you opt to publish, the program creates a directory `~/.ttbp/www` where it
 stores all html files it generates, and symlinks this from your `~/public_html`
 with your chosen blog directory. your blog will also be listed on the [main ttbp
-page](https://tilde.town/~endorphant/ttbp).
+page](https://envs.net/ttbp).
 
 you can also opt to publish to gopher, and the program will automatically
 generate a gophermap of your feels.
@@ -130,7 +129,7 @@ them from within the program can help keep your files properly linked up.
   posts. entries marked `(nopub)` will not get written to html or gopher,
   and toggling them from this menu will immediately publish or unpublish
   that entry (if you're not publishing your posts at all, these settings
-  won't matter, since your feels will never show up outside of tilde.team)
+  won't matter, since your feels will never show up outside of envs.net)
 * **backup your feels**--makes a .tar.gz of all your entries, saving one
   copy to `~/.ttbp/backups/` with the current date, and a second copy to
   your home directory for safekeeping.

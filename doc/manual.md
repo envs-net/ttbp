@@ -90,7 +90,7 @@ directory.
 if you opt to publish, the program creates a directory `~/.ttbp/www` where it
 stores all html files it generates, and symlinks this from your `~/public_html`
 with your chosen blog directory. your blog will also be listed on the [main ttbp
-page](https://tilde.town/~endorphant/ttbp).
+page](https://envs.net/ttbp).
 
 you can also opt to publish to gopher, and the program will automatically
 generate a gophermap of your feels.
