@@ -320,7 +320,7 @@ def init():
 
 you're all good to go, {friend}! if you have any questions about how things
 work here, check out the documentation from the main menu, ask in IRC, or
-drop ~endorphant a line!
+drop ~creme a line!
 
 hit <enter> to continue.
 """.format(
@@ -362,7 +362,7 @@ def gen_header():
             <div id=\"meta\">
                 <pre><blockquote><h1><a href=\"index.html#\">~"""
 + config.USER
-+ """</a>@<a href=\"https://tilde.town/~endorphant/ttbp\">TTBP</a></h1>
++ """</a>@<a href=\"https://envs.net/ttbp\">TTBP</a></h1>
 </blockquote></pre>
             </div>
 
@@ -698,7 +698,7 @@ def feedback_menu():
         cat = SUBJECTS[int(choice)]
         entered = input(
             """
-composing a {mail_category} to ~endorphant.
+composing a {mail_category} to sudoers@envs.net.
 
 press <enter> to open an external text editor. mail will be sent once you save and quit.
 
@@ -2215,7 +2215,7 @@ def update_user_version():
 
     print(
         """
-        you're all good to go, {}! please contact ~endorphant if
+        you're all good to go, {}! please contact sudoers@envs.net if
         something strange happened to you during this update.
         """.format(
             chatter.say("friend")

@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ttbp",
-    version="0.12.0",
+    version="0.12.2",
     description="command line social blogging tool used on tilde.town",
     url="https://github.com/modgethanc/ttbp",
     author="~endorphant",

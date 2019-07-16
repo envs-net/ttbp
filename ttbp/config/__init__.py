@@ -50,7 +50,7 @@ DEFAULT_HEADER = """
   </head>
   <body id="body">
 
-    <div>
+    <div id="meta">
       <pre><blockquote>
         <h1><a href="#">~$USER</a>@<a href="https://tilde.town/~endorphant/ttbp">TTBP</a></h1>
 
