@@ -51,8 +51,8 @@ by creating files with any date you want.)</em></p>
 <li>you can use <a href="https://daringfireball.net/projects/markdown/syntax">markdown</a></li>
 <li>you can use html</li>
 <li>you can also put things between <code>&lt;!-- comments --&gt;</code> to have them show up
-  in the feed but not render in a browser (but people can still read
-  them with view-source)</li>
+in the feed but not render in a browser (but people can still read
+them with view-source)</li>
 </ul>
 <h3>reading other feels</h3>
 <p>the <code>browse global feels</code> feature shows the ten most recent entries that anyone
@@ -68,6 +68,20 @@ world-viewable way! please be respectful about having access to other people's
 feels, and do not copy/repeat any information without getting their explicit
 permission. envs.net operates on a high level of mutual trust, and <code>ttbp</code> is
 designed to give individuals control over their content.</p>
+
+<h3>subscribing to users</h3>
+
+<p>the <code>visit your subscriptions</code> feature lets you view recent entries from a list
+of users you've subscribed to, as well as manage your subscription list. your
+list is saved to <code>~/.ttbp/config/subs</code>, which gets automatically updated when
+you add or remove subscriptions from ttbp.</p>
+
+<p>your subscription list is private; this means no one other than you can see who
+you're following. subscription view only shows the 50 most recent entries from
+your subscribe list; if you want to see more entries from an individual, you
+can navigate to their entries in `check out your neighbors   from the main
+menu.</p>
+
 <h3>privacy</h3>
 <p>when you start your ttbp, you have the option of publishing or not publishing
 your blog.</p>
@@ -79,8 +93,8 @@ entries through the ttbp interface, or by directly accessing your
 directory.</p>
 <p>if you opt to publish, the program creates a directory <code>~/.ttbp/www</code> where it
 stores all html files it generates, and symlinks this from your <code>~/public_html</code>
-with your chosen blog directory. your blog will also be listed on the <a href="https://envs.net/ttbp">main ttbp
-page</a>.</p>
+with your chosen blog directory. </p>
+
 <p>you can also opt to publish to gopher, and the program will automatically
 generate a gophermap of your feels.</p>
 <p>you can set publishing status on individual entries, or bury individual feels;
@@ -91,46 +105,46 @@ these are all actions you can perform manually from the command line, but doing
 them from within the program can help keep your files properly linked up.</p>
 <ul>
 <li><strong>read over feels</strong>--a list of all your entries, which you can open and
-  read like any other feel</li>
+read like any other feel</li>
 <li><strong>modify feels publishing</strong>--this lets you toggle privacy on individual
-  posts. entries marked <code>(nopub)</code> will not get written to html or gopher,
-  and toggling them from this menu will immediately publish or unpublish
-  that entry (if you're not publishing your posts at all, these settings
-  won't matter, since your feels will never show up outside of envs.net)</li>
+posts. entries marked <code>(nopub)</code> will not get written to html or gopher,
+and toggling them from this menu will immediately publish or unpublish
+that entry (if you're not publishing your posts at all, these settings
+won't matter, since your feels will never show up outside of tilde.team)</li>
 <li><strong>backup your feels</strong>--makes a .tar.gz of all your entries, saving one
-  copy to <code>~/.ttbp/backups/</code> with the current date, and a second copy to
-  your home directory for safekeeping.</li>
+copy to <code>~/.ttbp/backups/</code> with the current date, and a second copy to
+your home directory for safekeeping.</li>
 <li><strong>import a feels backup</strong>--unpacks a backup file into your current feels
-  list. this tool checks the <code>~/.ttbp/backups</code> directory for archives, and
-  expects a file created by the above backup utility. if it detects any file
-  collisions, it will preserve your current live copy and leave the backup
-  verison in a temp directory, and notify you that this happened. also, any
-  entries that were previously marked as <code>(nopub)</code> will retain their nopub
-  status.</li>
+list. this tool checks the <code>~/.ttbp/backups</code> directory for archives, and
+expects a file created by the above backup utility. if it detects any file
+collisions, it will preserve your current live copy and leave the backup
+verison in a temp directory, and notify you that this happened. also, any
+entries that were previously marked as <code>(nopub)</code> will retain their nopub
+status.</li>
 <li><strong>bury some feels</strong>--hides individual feels from viewing; entries are
-  moved to <code>~/.ttbp/buried</code> (and marked with a unique timestamp to prevent
-  file collision) with permissions set to 600, meaning no one except you
-  will be able to open that file. these entries are also hidden from your
-  own view from <code>read over feels</code>, and you'll have to open the files from
-  the command line if you want to see them. this is intended to be a
-  permament action, so you'll be asked to type the entry date once to load
-  the feel, then shown a preview of that feel, and then type the date again
-  to confirm burying.</li>
+moved to <code>~/.ttbp/buried</code> (and marked with a unique timestamp to prevent
+file collision) with permissions set to 600, meaning no one except you
+will be able to open that file. these entries are also hidden from your
+own view from <code>read over feels</code>, and you'll have to open the files from
+the command line if you want to see them. this is intended to be a
+permament action, so you'll be asked to type the entry date once to load
+the feel, then shown a preview of that feel, and then type the date again
+to confirm burying.</li>
 <li><strong>delete feels by day</strong>--<em>permanently removes individual entries</em>,
-  including deleting published html/gopher files if needed. this action is
-  not recoverable, unless you have a backup to restore; you'll be asked to
-  type the entry date once to load the feel, then shown a preview of that
-  feel, and then type the date again to confirm deletion.</li>
+including deleting published html/gopher files if needed. this action is
+not recoverable, unless you have a backup to restore; you'll be asked to
+type the entry date once to load the feel, then shown a preview of that
+feel, and then type the date again to confirm deletion.</li>
 <li><strong>purge all feels</strong>--<em>permanently removes all feels</em>, including deleting
-  all published html/gopher files if needed. this action is not recoverable,
-  unless you have a backup to restore. you'll be asked to type a
-  one-time-use purge code to confirm this action.</li>
+all published html/gopher files if needed. this action is not recoverable,
+unless you have a backup to restore. you'll be asked to type a
+one-time-use purge code to confirm this action.</li>
 <li><strong>wipe feels account</strong>--<em>permanently removes all data associated with
-  feels</em>, including deleting any published hmtl/gopher files and removing
-  your <code>~/.ttbp</code> directory. any backups that you have in <code>~/.ttbp/backups</code>
-  will also be deleted with this action (which is why the backup function
-  makes a second copy for safekeeping in your home directory). you will no
-  longer show up in any lists as a user.</li>
+feels</em>, including deleting any published hmtl/gopher files and removing
+your <code>~/.ttbp</code> directory. any backups that you have in <code>~/.ttbp/backups</code>
+will also be deleted with this action (which is why the backup function
+makes a second copy for safekeeping in your home directory). you will no
+longer show up in any lists as a user.</li>
 </ul>
 <h3>settings</h3>
 <p>the settings menu lets you change specific options for handling your feels and
@@ -139,11 +153,11 @@ using the interface.</p>
 <li><strong>editor</strong>--set your text editor</li>
 <li><strong>gopher</strong>--opt in or out of automatically posting to gopher</li>
 <li><strong>post as nopub</strong>--set whether posts default to being published or not
-  published (if you're not publishing your feels, this doesn't matter)</li>
+published (if you're not publishing your feels, this doesn't matter)</li>
 <li><strong>publish dir</strong>--set the directory under you <code>public_html</code> where feels will be
-  published (if you're not publishing your feels, this defaults to <code>None</code>)</li>
+published (if you're not publishing your feels, this defaults to <code>None</code>)</li>
 <li><strong>publishing</strong>--opt in or out of automatically publishing entries to a
-  world-readable html page</li>
+world-readable html page</li>
 <li><strong>rainbows</strong>--opt in or out of having multicolored menu text</li>
 </ul>
 <h3>changing your page layout</h3>
@@ -154,19 +168,21 @@ your ~/.ttbp directory entirely.  <strong>you might want to back up your
 ~/.ttbp/entries directory before you do this.</strong></p>
 <ul>
 <li>to modify your stylesheet, edit your ~/.ttbp/config/style.css</li>
-<li>to modify the page header, edit your ~/.ttbp/config/header.txt</li>
+<li>to modify the page header, edit your ~/.ttbp/config/header.txt
+<ul>
 <li>there's a place marked off in the default header where you can safely put
-    custom HTML elements!</li>
+custom HTML elements!</li>
+</ul></li>
 <li>to modify the page footer, edit your ~/.ttbp/config/footer.txt</li>
 </ul>
 <h3>general tips/troubleshooting</h3>
 <ul>
 <li>if the date looks like it's ahead or behind, it's because you haven't set
-  your local timezone yet.  here are some
-  <a href="http://www.cyberciti.biz/faq/linux-unix-set-tz-environment-variable/">timezone setting instructions</a></li>
+your local timezone yet.  here are some
+<a href="http://www.cyberciti.biz/faq/linux-unix-set-tz-environment-variable/">timezone setting instructions</a></li>
 <li>the feels burying tool will effectively clear your post for the day; you can
-  use this feature to start a fresh entry on a particular day by burying the
-  current day's feels and then editing a new file</li>
+use this feature to start a fresh entry on a particular day by burying the
+current day's feels and then editing a new file</li>
 </ul>
 <h3>future features</h3>
 <p>these are a few ideas being kicked around, or under active development:</p>

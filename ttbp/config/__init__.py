@@ -3,20 +3,20 @@ import os
 import sys
 import time
 
-from .. import util
+import ttbp.util
 
 ## System config
 
 # We refer to some package files (ie .css stuff), so we save a reference to the
 # path.
-INSTALL_PATH = os.path.dirname(sys.modules["ttbp"].__file__)
+INSTALL_PATH = os.path.dirname(sys.modules['ttbp'].__file__)
 
 # We use this to store any persisted, global state.
-VAR = "/var/global/ttbp"
-VAR_WWW = os.path.join(VAR, "www")
+VAR = '/var/global/ttbp'
+VAR_WWW = os.path.join(VAR, 'www')
 
-if not os.path.isdir("/var/global"):
-    raise Exception("bad system state: /var/global does not exist.")
+if not os.path.isdir('/var/global'):
+    raise Exception('bad system state: /var/global does not exist.')
 
 if not os.path.isdir(VAR):
     os.mkdir(VAR)
@@ -24,7 +24,7 @@ if not os.path.isdir(VAR):
 if not os.path.isdir(VAR_WWW):
     os.mkdir(VAR_WWW)
 
-LIVE = "https://envs.net/~"
+LIVE = 'https://envs.net/~'
 FEEDBOX = "sudoers@envs.net"
 USERFILE = os.path.join(VAR, "users.txt")
 GRAFF_DIR = os.path.join(VAR, "graffiti")
@@ -36,7 +36,7 @@ if not os.path.isdir(GRAFF_DIR):
 
 ## Defaults
 
-DEFAULT_HEADER = """
+DEFAULT_HEADER = '''
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html>
   <head>
@@ -58,9 +58,9 @@ DEFAULT_HEADER = """
     </div>
 
     <div id="tlogs">
-""".lstrip()
+'''.lstrip()
 
-DEFAULT_FOOTER = """
+DEFAULT_FOOTER = '''
     </div>
 <!-- Button DarkLight-->
       <div class="button_darklight">
@@ -75,32 +75,32 @@ DEFAULT_FOOTER = """
 
   </body>
 </html>
-""".lstrip()
+'''.lstrip()
 
-with open(os.path.join(INSTALL_PATH, "config", "defaults", "style.css")) as f:
+with open(os.path.join(INSTALL_PATH, 'config', 'defaults', 'style.css')) as f:
     DEFAULT_STYLE = f.read()
 
 
 ## User config
 
-USER = os.path.basename(os.path.expanduser("~"))
-USER_HOME = os.path.expanduser("~")
-PATH = os.path.join(USER_HOME, ".ttbp")
-PUBLIC = os.path.join(USER_HOME, "public_html")
-WWW = os.path.join(PATH, "www")
-GOPHER_ENTRIES = os.path.join(PATH, "gopher")
-GOPHER_PATH = os.path.join(USER_HOME, "public_gopher", "feels")
-USER_CONFIG = os.path.join(PATH, "config")
-TTBPRC = os.path.join(USER_CONFIG, "ttbprc")
-MAIN_FEELS = os.path.join(PATH, "entries")
-BURIED_FEELS = os.path.join(PATH, "buried")
-NOPUB = os.path.join(USER_CONFIG, "nopub")
-BACKUPS = os.path.join(PATH, "backups")
-SUBS = os.path.join(USER_CONFIG, "subs")
+USER = os.path.basename(os.path.expanduser('~'))
+USER_HOME = os.path.expanduser('~')
+PATH = os.path.join(USER_HOME, '.ttbp')
+PUBLIC = os.path.join(USER_HOME, 'public_html')
+WWW = os.path.join(PATH, 'www')
+GOPHER_ENTRIES = os.path.join(PATH, 'gopher')
+GOPHER_PATH = os.path.join(USER_HOME, 'public_gopher', 'feels')
+USER_CONFIG = os.path.join(PATH, 'config')
+TTBPRC = os.path.join(USER_CONFIG, 'ttbprc')
+MAIN_FEELS = os.path.join(PATH, 'entries')
+BURIED_FEELS = os.path.join(PATH, 'buried')
+NOPUB = os.path.join(USER_CONFIG, 'nopub')
+BACKUPS = os.path.join(PATH, 'backups')
+SUBS = os.path.join(USER_CONFIG, 'subs')
 
 ## UI
 
-BANNER = """
+BANNER = '''
 ___________________________________________________________
 |                                                          |
 |  ____ ____ ____ _    ____    ____ _  _ ____ _ _  _ ____  |
@@ -109,9 +109,9 @@ ___________________________________________________________
 |                            <gan jue; to feel> ver 0.12.2 |
 |       envs.net edition                                   |
 |__________________________________________________________|
-""".lstrip()
+'''.lstrip()
 #  ~ u n s t a b l e  e x p e r i m e n t a l  b r a n c h ~
-# '''.lstrip()
+#'''.lstrip()
 
 ## page texts
 
@@ -140,7 +140,7 @@ other contributors:
     ~sinacutie, for css updates
 
 if you have ideas for ttbp, you are welcome to contact me to discuss them;
-please send me tildemail or open an issue. i am not a very experienced
+please send me mail or open a github issue. i am not a very experienced
 developer, and ttbp is one of my first public-facing projects, so i appreciate
 your patience while i learn how to be a better developer!
 
@@ -160,14 +160,12 @@ these.
 press <enter> to begin recording your feels in your chosen text
 editor.
 
-""".format(
-    today=time.strftime("%d %B %Y")
-)
+""".format(today=time.strftime("%d %B %Y"))
 
 bury_feels_prompt = """\
 burying a feel removes it from view, including your own. buried feels are
 stashed in a private directory at:
-
+   
    {buried_dir}
 
 you can visit your feels there from the command line, but no one else can view
@@ -178,9 +176,7 @@ command line to view your buried feels)
 
 which day's feels do you want to bury?
 
-YYYYMMDD (or 'q' to cancel)> """.format(
-    buried_dir=BURIED_FEELS
-)
+YYYYMMDD (or 'q' to cancel)> """.format(buried_dir=BURIED_FEELS)
 
 account_wipe_prompt = """\
 warning! ! ! this action is irreversible!!!
@@ -214,34 +210,34 @@ figure it out!
 ## update announcements
 
 UPDATES = {
-    "0.9.0": """
+        "0.9.0": """
 ver. 0.9.0 features:
     * browsing other people's feels from neighbor view
     * documentation browser""",
-    "0.9.1": """
+        "0.9.1": """
 ver 0.9.1 features:
     * graffiti wall """,
-    "0.9.2": """
+        "0.9.2": """
 ver 0.9.2 features:
     * paginated entry view
     * improved entry listing performance so it should
       be less sluggish (for now)
     * expanded menu for viewing your own feels (further features to be implemented) """,
-    "0.9.3": """
+        "0.9.3": """
 version 0.9.3 features:
         * ttbp is now packaged, making it easier to contribute to.
         * things should otherwise be the same!
         * check out https://github.com/modgethanc/ttbp if you'd like to contribute.
         * takes advantage of new /var/global """,
-    "0.10.1": """
+        "0.10.1": """
 ~[version 0.10.1 features]~
         * thanks to help from ~vilmibm, ttbp now supports publishing to gopher!
         * if you enable gopher publishing, feels will automatically publish to
-            gopher://tilde.town/1/~{user}/feels
+            gopher://tilde.team/1/~{user}/feels
         * if you don't know what gopher is, it's fine to opt-out; ask around on
             irc if you'd like to learn more!
         * the settings menu has been reworked to be less clunky""",
-    "0.11.0": """
+        "0.11.0": """
 ~[version 0.11.0 update]~
 
     * rainbow menus are now an option! please message ~endorphant (with
@@ -264,14 +260,14 @@ version 0.9.3 features:
         * ~login created centralfeels, which is an opt-in collection of
             html-published feels; create a blank file called '.centralfeels' in
             your home directory if you'd like to be included!""",
-    "0.11.1": """
+        "0.11.1": """
 ~[version 0.11.1 update]~
 
     * a quick patch to correct a directory listing error, nothing too
       exciting
     * general PSA: feel free to use the github repo for bugs/feature requests:
             https://github.com/modgethanc/ttbp/issues""",
-    "0.11.2": """
+        "0.11.2": """
 ~[version 0.11.2 update]~
 
     * added a new option to allow setting entries to default to either public or
@@ -279,7 +275,7 @@ version 0.9.3 features:
       already publishing to html/gopher, but is available either way!
 
       you can find this option under 'settings' as 'post as nopub'.""",
-    "0.11.3": """
+        "0.11.3": """
 ~[version 0.11.3 update]~
 
     * thanks to ~sinacutie, you can now set custom css for the permalink text
@@ -287,7 +283,7 @@ version 0.9.3 features:
       your current css file, and shouldn't change the appearance of your page.
 
       if you're not using custom css, don't worry about this!""",
-    "0.12.0": """
+        "0.12.0": """
 ~[version 0.12.0 update]~
 
     a lot of new stuff this time! from the main menu, option (1) is now called
@@ -320,11 +316,11 @@ version 0.9.3 features:
     and wants to kick some spare change my way; this is a labor of love, and i'm
     happy to work on it regardless :)
 """,
-    "0.12.1": """
+        "0.12.1":"""
 ~[version 0.12.1 update]~
 
     new feature: "visit your subscriptions"
-        * view recent entries from a list of townies you've subscribed to
+        * view recent entries from a list of teammates you've subscribed to
         * subscription list is private; no one else can see who you're following
         * add/remove users from the subscription menu
 
@@ -337,7 +333,7 @@ version 0.9.3 features:
 
     keep feelin' together <3
 """,
-    "0.12.2": """
+        "0.12.2":"""
 ~[version 0.12.2 update]~
 
     bug fix: ~epicmorphism helped out with fixing the pagination bug! now, when
@@ -350,5 +346,5 @@ version 0.9.3 features:
 
     feel on!
     ~endo
-""",
+"""
 }

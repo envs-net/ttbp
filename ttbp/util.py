@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-"""
+'''
 util.py: frequently used terminal and text processing utilities
 copyright (c) 2016 ~endorphant (endorphant@tilde.town)
 
@@ -22,7 +22,7 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
+'''
 import random
 import time
 from six.moves import input
@@ -32,29 +32,20 @@ import colorama
 import inflect
 
 ## misc globals
-BACKS = ["back", "b", "q", "<q>"]
-NAVS = ["u", "d"]
+BACKS = ['back', 'b', 'q', '<q>']
+NAVS = ['u', 'd']
 
 ## color stuff
 colorama.init()
-textcolors = [
-    colorama.Fore.RED,
-    colorama.Fore.GREEN,
-    colorama.Fore.YELLOW,
-    colorama.Fore.BLUE,
-    colorama.Fore.MAGENTA,
-    colorama.Fore.WHITE,
-    colorama.Fore.CYAN,
-]
+textcolors = [ colorama.Fore.RED, colorama.Fore.GREEN, colorama.Fore.YELLOW, colorama.Fore.BLUE, colorama.Fore.MAGENTA, colorama.Fore.WHITE, colorama.Fore.CYAN]
 lastcolor = colorama.Fore.RESET
 
 p = inflect.engine()
 
-
 def set_rainbow():
-    """
+    '''
     prints a random terminal color code
-    """
+    '''
 
     global lastcolor
 
@@ -66,19 +57,17 @@ def set_rainbow():
 
     print(color)
 
-
 def reset_color():
-    """
+    '''
     prints terminal color code reset
-    """
+    '''
 
     print(colorama.Fore.RESET)
 
-
 def attach_rainbow():
-    """
+    '''
     returns a random terminal color code, presumably to be 'attached' to a string
-    """
+    '''
 
     global lastcolor
 
@@ -89,27 +78,24 @@ def attach_rainbow():
     lastcolor = color
     return color
 
-
 def attach_reset():
-    """
+    '''
     returns terminal color code reset, presumably to be 'attached' to a string
-    """
+    '''
 
     return colorama.Style.RESET_ALL
 
-
 def hilight(text):
-    """
+    '''
     takes a string and highlights it on return
-    """
+    '''
 
-    return colorama.Style.BRIGHT + text + colorama.Style.NORMAL
-
+    return colorama.Style.BRIGHT+text+colorama.Style.NORMAL
 
 def rainbow(txt):
-    """
+    '''
     Takes a string and makes every letter a different color.
-    """
+    '''
 
     rainbow = ""
     for letter in txt:
@@ -119,15 +105,14 @@ def rainbow(txt):
 
     return rainbow
 
-
 def pretty_time(time):
-    """
+    '''
     human-friendly time formatter
 
     takes an integer number of seconds and returns a phrase that describes it,
     using the largest possible figure, rounded down (ie, time=604 returns '10
     minutes', not '10 minutes, 4 seconds' or '604 seconds')
-    """
+    '''
 
     m, s = divmod(time, 60)
     if m > 0:
@@ -151,28 +136,26 @@ def pretty_time(time):
     else:
         return p.no("second", s)
 
-
 def genID(digits=5):
-    """
+    '''
     returns a string-friendly string of digits, which can start with 0
-    """
+    '''
 
     id = ""
-    x = 0
+    x  = 0
     while x < digits:
-        id += str(random.randint(0, 9))
+        id += str(random.randint(0,9))
         x += 1
 
     return id
 
-
 def print_menu(menu, rainbow=False):
-    """
+    '''
     A pretty menu handler that takes an incoming lists of
     options and prints them nicely.
 
     Set rainbow=True for colorized menus.
-    """
+    '''
 
     i = 0
     for x in menu:
@@ -182,24 +165,23 @@ def print_menu(menu, rainbow=False):
         line.append("\t[ ")
         if i < 10:
             line.append(" ")
-        line.append(str(i) + " ] " + x)
+        line.append(str(i)+" ] "+x)
         line.append(attach_reset())
         print("".join(line))
         i += 1
 
-
 def list_select(options, prompt):
-    """
+    '''
     Given a list and query prompt, returns either False as an
     eject flag, or an integer index of the list Catches cancel
     option from list defined by BACKS; otherwise, retries on
     ValueError or IndexError.
-    """
+    '''
 
     ans = ""
     invalid = True
 
-    choice = input("\n" + prompt)
+    choice = input("\n"+prompt)
 
     if choice in BACKS:
         return False
@@ -219,14 +201,13 @@ def list_select(options, prompt):
 
     return ans
 
-
 def input_yn(query):
-    """
+    '''
     Given a query, returns boolean True or False by processing y/n input
-    """
+    '''
 
     try:
-        ans = input(query + " [y/n] ")
+        ans = input(query+" [y/n] ")
     except KeyboardInterrupt:
         input_yn(query)
 
@@ -235,9 +216,8 @@ def input_yn(query):
 
     return ans == "y"
 
-
 def parse_date(file):
-    """
+    '''
     parses date out of pre-validated filename
 
     * assumes a filename of YYYYMMDD.txt
@@ -245,7 +225,7 @@ def parse_date(file):
       [0] 'YYYY'
       [1] 'MM'
       [2] 'DD'
-    """
+    '''
 
     rawdate = os.path.splitext(os.path.basename(file))[0]
 
