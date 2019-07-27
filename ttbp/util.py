@@ -232,3 +232,4 @@ def parse_date(file):
     date = [rawdate[0:4], rawdate[4:6], rawdate[6:]]
 
     return date
+

@@ -52,7 +52,7 @@ DEFAULT_HEADER = '''
 
     <div id="meta">
       <pre><blockquote>
-        <h1><a href="#">~$USER</a>@<a href="https://tilde.town/~endorphant/ttbp">TTBP</a></h1>
+        <h1><a href="#">~$USER</a>@<a href="https://envs.net/ttbp">TTBP</a></h1>
 
       </blockquote></pre>
     </div>
@@ -103,11 +103,11 @@ SUBS = os.path.join(USER_CONFIG, 'subs')
 BANNER = '''
 ___________________________________________________________
 |                                                          |
+|  the envs.net                                                        |
 |  ____ ____ ____ _    ____    ____ _  _ ____ _ _  _ ____  |
 |  |___ |___ |___ |    [__     |___ |\ | | __ | |\ | |___  |
 |  |    |___ |___ |___ ___]    |___ | \| |__] | | \| |___  |
 |                            <gan jue; to feel> ver 0.12.2 |
-|       envs.net edition                                   |
 |__________________________________________________________|
 '''.lstrip()
 #  ~ u n s t a b l e  e x p e r i m e n t a l  b r a n c h ~

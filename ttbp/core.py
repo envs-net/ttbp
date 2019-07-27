@@ -249,12 +249,12 @@ def write_global_feed(blogList):
     <html>
         <head>
             <title>envs.net feels engine</title>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://envs.net/css/css_style.css" />
-            <link rel="stylesheet" href="style.css" />
-            <script src="https://envs.net/js/darklight.js"></script>
+            <meta charset=\"UTF-8\">
+            <meta http-equiv=\"X-UA-Compatible" content="IE=edge\">
+            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+            <link rel=\"stylesheet\" href=\"https://envs.net/css/css_style.css\" />
+            <link rel=\"stylesheet\" href=\"style.css\" />
+            <script src=\"https://envs.net/js/darklight.js\"></script>
         </head>
         <body id="body">
           <div class="container">
@@ -272,7 +272,7 @@ def write_global_feed(blogList):
         ## docs
         outfile.write("""\
             <div class="docs">""")
-        outfile.write(mistune.markdown(open(os.path.join(config.INSTALL_PATH, "..", "README.md"), "r").read()))
+        outfile.write(open(os.path.join(config.INSTALL_PATH, "README.html"), "r").read())
         outfile.write("""\
             </div>""")
 
