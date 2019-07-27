@@ -103,7 +103,7 @@ SUBS = os.path.join(USER_CONFIG, 'subs')
 BANNER = '''
 ___________________________________________________________
 |                                                          |
-|  the envs.net                                                        |
+|  the envs.net                                            |
 |  ____ ____ ____ _    ____    ____ _  _ ____ _ _  _ ____  |
 |  |___ |___ |___ |    [__     |___ |\ | | __ | |\ | |___  |
 |  |    |___ |___ |___ ___]    |___ | \| |__] | | \| |___  |
@@ -165,7 +165,7 @@ editor.
 bury_feels_prompt = """\
 burying a feel removes it from view, including your own. buried feels are
 stashed in a private directory at:
-   
+
    {buried_dir}
 
 you can visit your feels there from the command line, but no one else can view

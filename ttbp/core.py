@@ -240,7 +240,7 @@ def write_global_feed(blogList):
       prints to blog feed
     '''
 
-    try: 
+    try:
         outfile = open(FEED, "w")
 
         ## header
@@ -480,12 +480,12 @@ def toggle_nopub(filename):
 def bury_feel(filename):
     """buries given filename; this removes the feel from any publicly-readable
     location, and moves the textfile to user's private feels directory.
-    
+
     timestring will be added to the filename to disambiguate and prevent
     filename collisions.
-    
+
     creates buried feels dir if it doesn't exist.
-    
+
     regenerates feels list and republishes."""
 
     if not os.path.exists(config.BURIED_FEELS):
