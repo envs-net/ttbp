@@ -828,7 +828,7 @@ def view_feels(townie):
     date order; allows selection of one feel to read.
     '''
 
-    metas, owner = generate_feels_list(teammate)
+    metas, owner = generate_feels_list(townie)
 
     if len(metas) > 0:
         entries = []
@@ -840,7 +840,7 @@ def view_feels(townie):
 
         return list_entries(metas, entries, owner+" recorded feels, listed by date: ")
     else:
-        redraw("no feels recorded by ~"+teammate)
+        redraw("no feels recorded by ~"+townie)
 
 def generate_feels_list(user):
     """create a list of feels for display from the named user.
