@@ -271,7 +271,7 @@ def write_global_feed(blogList):
 
         ## docs
         outfile.write("""\
-            <div class="docs">""")
+            <div class=\"docs\">""")
         outfile.write(open(os.path.join(config.INSTALL_PATH, "README.html"), "r").read())
         outfile.write("""\
             </div>""")
