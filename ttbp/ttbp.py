@@ -592,7 +592,7 @@ def main_menu():
         redraw()
         show_credits()
     elif choice == '9':
-        subprocess.call(["lynx", "https://tilde.wiki/ttbp"])
+        subprocess.call(["lynx", "https://envs.net/ttbp"])
         redraw()
     elif choice in QUITS:
         return stop()
@@ -1664,7 +1664,7 @@ if yes, your feels will be published to a directory of your choice in
 your public_html. i'll confirm the location of that directory in a
 moment.
 
-if not, your feels will only be readable from within the tilde.team
+if not, your feels will only be readable from within the envs.net
 network. if you already have a publishing directory, i'll remove it for
 you (don't worry, your written entries will still be saved!)
 
@@ -1847,7 +1847,7 @@ def update_user_version():
             print("""
     * thanks to help from ~vilmibm, ttbp now supports publishing to gopher!
     * if you enable gopher publishing, feels will automatically publish to
-        gopher://tilde.team/1/~"""+config.USER+"""/feels
+        gopher://envs.net/1/~"""+config.USER+"""/feels
 
             """)
             SETTINGS.update({'gopher': gopher.select_gopher()})
