@@ -1,6 +1,6 @@
 # FEELS MANUAL
 
-`ttbp` stands for "tilde.team blogging platform", the original working name for
+`ttbp` stands for "tilde.town blogging platform", the original working name for
 this project. the complete codebase is available on
 [tildegit](https://tildegit.org/team/ttbp).
 
