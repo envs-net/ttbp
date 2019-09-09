@@ -23,10 +23,6 @@ body {
   margin-bottom:-4em;
 }
 
-.entry p {
-  padding: 1em;
-}
-
 .entry p.permalink {
   font-size: .6em;
   font-color: #808080;
