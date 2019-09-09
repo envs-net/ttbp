@@ -15,7 +15,7 @@ setup(
         'License :: OSI Approved :: MIT License',
     ],
     keywords='blog',
-    packages=[ttbp],
+    packages=['ttbp'],
     install_requires = [
         'inflect==0.2.5',
         'mistune==0.8.1',
