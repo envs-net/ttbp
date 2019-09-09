@@ -256,12 +256,12 @@ def write_global_feed(blogList):
             <link rel="stylesheet" href="https://envs.net/css/dracula.css" />
         </head>
         <body>
-          <div class="meta">
-            <h1>tilde.town feels engine - envs.net version</h1>
+          <div>
+            <h2>tilde.town feels engine - envs.net version</h2>
 
-            <h2><a href="https://github.com/envs-net/ttbp">github repo</a> | <a
+            <h3><a href="https://github.com/envs-net/ttbp">github repo</a> | <a
             href="http://tilde.town/~endorphant/blog/20160510.html">state
-            of the ttbp</a></h2>
+            of the ttbp</a></h3>
             <!--<p>curious? run <b>ttbp</b> while logged in to envs.net.</p>
             <p>it's still a little volatile. let me know if anything breaks.</p>--->
           </div>
