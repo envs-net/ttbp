@@ -44,17 +44,12 @@ DEFAULT_HEADER = '''
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://envs.net/css/css_style.css" />
+    <link rel="stylesheet" href="https://envs.net/css/dracula.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://envs.net/js/darklight.js"></script>
   </head>
-  <body id="body">
-
+  <body>
     <div id="meta">
-      <pre><blockquote>
         <h1><a href="#">~$USER</a>@<a href="https://envs.net/ttbp">TTBP</a></h1>
-
-      </blockquote></pre>
     </div>
 
     <div id="tlogs">
@@ -62,17 +57,6 @@ DEFAULT_HEADER = '''
 
 DEFAULT_FOOTER = '''
     </div>
-<!-- Button DarkLight-->
-      <div class="button_darklight">
-        <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
-      </div>
-
-<script>
-(function() {
-  setThemeFromCookie()
-})();
-</script>
-
   </body>
 </html>
 '''.lstrip()

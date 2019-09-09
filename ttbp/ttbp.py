@@ -324,20 +324,17 @@ def gen_header():
         <meta charset=\"UTF-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-        <link rel=\"stylesheet\" href=\"https://envs.net/css/css_style.css\" />
+        <link rel=\"stylesheet\" href=\"https://envs.net/css/dracula.css\" />
         <link rel=\"stylesheet\" href=\"style.css\" />
-        <script src=\"https://envs.net/js/darklight.js\"></script>
     </head>
-    <body id=\"body\">
-
-        <div class=\"container\">
-            <div id=\"meta\">
-                <pre><blockquote><h1><a href=\"index.html#\">~"""+config.USER+"""</a>@<a href=\"https://envs.net/ttbp\">TTBP</a></h1>
-</blockquote></pre>
-            </div>
-
-            <!---put your custom html here-->
+    <body>
+        <div id=\"meta\">
+		<h1><a href=\"index.html#\">~"""+config.USER+"""</a>@<a href=\"https://envs.net/ttbp\">TTBP</a></h1>
         </div>
+
+        <!---put your custom html here-->
+
+
 
         <!---don't put anything after this line-->
         <div id=\"tlogs\">\
