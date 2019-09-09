@@ -252,12 +252,11 @@ def write_global_feed(blogList):
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://envs.net/css/css_style.css" />
             <link rel="stylesheet" href="style.css" />
-            <script src="https://envs.net/js/darklight.js"></script>
+            <link rel="stylesheet" href="https://envs.net/css/dracula.css" />
         </head>
-        <body id="body">
-          <div class="container">
+        <body>
+          <div class="meta">
             <h1>tilde.town feels engine - envs.net version</h1>
 
             <h2><a href="https://github.com/envs-net/ttbp">github repo</a> | <a
@@ -266,8 +265,7 @@ def write_global_feed(blogList):
             <!--<p>curious? run <b>ttbp</b> while logged in to envs.net.</p>
             <p>it's still a little volatile. let me know if anything breaks.</p>--->
           </div>
-    """
-        )
+    """)
 
         ## docs
         outfile.write("""\
@@ -291,17 +289,6 @@ def write_global_feed(blogList):
         outfile.write("""
                 </ul>
             </div>
-<!-- Button DarkLight-->
-      <div class="button_darklight">
-        <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
-      </div>
-
-<script>
-(function() {
-  setThemeFromCookie()
-})();
-</script>
-
       </body>
     </html>
     """)

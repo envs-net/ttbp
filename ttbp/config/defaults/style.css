@@ -41,3 +41,23 @@ blockquote {
   border: 1px dotted white;
   padding: 4px;
 }
+
+.feed ul{
+  text-align: center;
+}
+
+.feed li {
+  list-style-type: none;
+}
+
+.feed{
+  float: right;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  font-size: 70%;
+}
+
+.feed h3 {
+  text-align: center;
+}
