@@ -3,11 +3,11 @@
 `ttbp` stands for "tilde.town blogging platform", the original working name for
 this project.
 
-![ttbp main menu screenshot](https://envs.net/ttbp/screenshots/ttbp-main.png)
+![ttbp main menu screenshot](https://ttbp.envs.net/screenshots/ttbp-main.png)
 
-![ttbp entries view screenshot](https://envs.net/ttbp/screenshots/ttbp-entries.png)
+![ttbp entries view screenshot](https://ttbp.envs.net/screenshots/ttbp-entries.png)
 
-![ttbp compose view screenshot](https://envs.net/ttbp/screenshots/ttbp-compose.png)
+![ttbp compose view screenshot](https://ttbp.envs.net/screenshots/ttbp-compose.png)
 
 `ttbp` runs from the command line, providing a hub for writing personal blog
 posts and reading posts written by other users of envs.net. it's a little bit
