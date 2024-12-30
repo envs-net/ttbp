@@ -6,7 +6,9 @@ import os
 import time
 import subprocess
 
-from ttbp import util, config
+from . import util
+from . import config
+#from .core import parse_date
 
 GOPHER_PROMPT = """
 

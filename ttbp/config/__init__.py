@@ -3,7 +3,7 @@ import os
 import sys
 import time
 
-import ttbp.util
+from .. import util
 
 ## System config
 
