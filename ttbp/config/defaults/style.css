@@ -10,6 +10,7 @@ body {
   float: left;
   text-align: left;
   width: 100%;
+  background-color: #e0b0ff;
 }
 
 #tlogs {
@@ -21,6 +22,10 @@ body {
   border: 1px dotted white;
   padding: .4em;
   margin-bottom:-4em;
+}
+
+.entry p {
+  padding: 1em;
 }
 
 .entry p.permalink {

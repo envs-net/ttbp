@@ -4,8 +4,8 @@ from setuptools import setup
 
 setup(
     name='ttbp',
-    version='0.12.2',
-    description='command line social blogging tool used on tilde.team',
+    version='0.12.3',
+    description='command line social blogging tool used on envs.net',
     url='https://github.com/envs-net/ttbp',
     author='~endorphant',
     author_email='endorphant@tilde.town',

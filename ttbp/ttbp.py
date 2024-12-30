@@ -49,7 +49,7 @@ import inflect
 
 from ttbp import config, core, chatter, gopher, util
 
-__version__ = "0.12.2"
+__version__ = "0.12.3"
 __author__ = "endorphant <endorphant@tilde.town)"
 
 p = inflect.engine()
@@ -329,7 +329,7 @@ def gen_header():
     </head>
     <body>
         <div id=\"meta\">
-		<h1><a href=\"index.html#\">~"""+config.USER+"""</a>@<a href=\"https://envs.net/ttbp\">TTBP</a></h1>
+		<h1><a href=\"index.html#\">~"""+config.USER+"""</a>@<a href=\"https://ttbp.envs.net/\">TTBP</a></h1>
         </div>
 
         <!---put your custom html here-->
@@ -358,7 +358,7 @@ def valid_setup(load_settings):
             print("CONFIG ERROR! publishing is enabled but no directory is set")
             return False
 
-        if (not os.path.exists(config.WWW) or 
+        if (not os.path.exists(config.WWW) or
                 not os.path.exists(os.path.join(config.PUBLIC,
                     SETTINGS.get("publish dir")))):
             print("something's weird with your publishing directories. let's try rebuilding them!")
@@ -589,7 +589,7 @@ def main_menu():
         redraw()
         show_credits()
     elif choice == '9':
-        subprocess.call(["lynx", "https://envs.net/ttbp"])
+        subprocess.call(["lynx", "https://ttbp.envs.net/"])
         redraw()
     elif choice in QUITS:
         return stop()
@@ -976,7 +976,7 @@ def purge_feels():
         print("""
 
 i've loaded up all {count} of your feels for purging. if you're ready, carefully
-type the following purge code: 
+type the following purge code:
          _________
          |       |
          | {purgecode} |
@@ -1020,7 +1020,7 @@ def wipe_account():
 
     print("""
 your account is all packed up! if you're ready, carefully type the following
-purge code: 
+purge code:
          _________
          |       |
          | {purgecode} |
@@ -1914,6 +1914,10 @@ something strange happened to you during this update.
     if z < 2:
         # version 0.12.2 patch notes
         print(config.UPDATES["0.12.2"])
+
+    if z < 3:
+        # version 0.12.3 patch notes
+        print(config.UPDATES["0.12.3"])
 
     confirm = ""
 
