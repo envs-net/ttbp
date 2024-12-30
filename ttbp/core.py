@@ -277,7 +277,7 @@ def write_global_feed(blogList):
         ## feed
         outfile.write("""\
             <p>&nbsp;</p>
-            <div class="feed">
+            <div class=\"feed\">
             <h3>live feels-sharing:</h3>
                 <ul>""")
         for blog in blogList:
